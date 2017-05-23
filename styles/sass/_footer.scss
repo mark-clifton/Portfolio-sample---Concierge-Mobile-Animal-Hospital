@@ -1,0 +1,77 @@
+.site-footer {
+	color: white;
+	background-color: $gray;
+	text-align: center;
+	clear: both;
+	a {
+		color: $brand-color-secondary;
+		&:hover {
+			color: white;
+		}
+	}
+}
+.service-list {
+	font-size: $base-font-size * .875;
+	font-style: italic;
+	padding: 0 $base-line-height $base-line-height $base-line-height;
+	p {
+		margin: 0;
+	}
+}
+.social {
+	padding: $base-line-height;
+	li {
+		display: inline-block;
+		margin: 0 $base-line-height * .5;
+	}
+	a {
+		.st0 {
+			fill: $brand-color-secondary;
+			transition: fill .25s;
+		}
+		&:hover {
+			.st0 {
+				fill: white;
+			}
+		}
+	}
+	svg {
+		height: 2rem;
+		width: 2rem;
+	}
+}
+.footer-nav {
+	padding: $base-line-height;
+	> ul {
+	}
+	a {
+		color: white;
+		display: block;
+		padding: ($base-font-size * .5) $base-font-size;
+		transition: background-color .25s;
+		&:hover {
+			background-color: $brand-color-secondary;
+		}
+	}
+}
+.copyright {
+	font-size: $base-font-size * .5;
+	line-height: 1.5em;
+	color: lighten($neutral, 30%);
+	text-align: center;
+	padding: $base-line-height;
+	border-top: solid thin rgba(white, .3);
+	@include no-child-margins;
+}
+
+@media only screen and (min-width: $break-medium + 1) {
+
+	.footer-nav {
+		> ul {
+			> li {
+				display: inline-block;
+			}
+		}
+	}
+
+}

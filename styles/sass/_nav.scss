@@ -1,0 +1,161 @@
+.site-nav {
+	font-size: $base-font-size * 1.25;
+	ul ul {
+		display: none;
+	}
+	li {
+		&:hover {
+			> a {
+				background-color: rgba(white, .25);
+			}
+		}
+	}
+	a {
+		color: white;
+		display: block;
+		transition: background-color .25s;
+		&:hover {
+			color: white;
+		}
+		&.on {
+			color: $brand-color-secondary;
+		}
+	}
+}
+.header-contact {
+	font-size: $base-font-size * 1.5;
+	font-weight: 300;
+	margin: 0;
+	padding: $base-line-height * .5;
+}
+.mobile-contact {
+	font-size: $base-font-size * 1.25;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: -2rem;
+	left: 0;
+	z-index: +1;
+	a {
+		color: white;
+		padding: ($base-line-height * .25) $base-line-height;
+		&:hover {
+			color: white;
+			background-color: rgba(white, .25);
+		}
+	}
+}
+.nav-toggle {
+	font-size: $base-font-size * .75;
+	line-height: $base-font-size;
+	font-weight: bold;
+	color: $brand-color-primary;
+	text-align: center;
+	padding: $base-line-height * .25;
+	cursor: pointer;
+	position: absolute;
+	top: $base-line-height * .25;
+	left: $base-line-height * .25;
+	span {
+		display: block;
+	}
+}
+.nav-overlay {
+	background-color: rgba(black, .7);
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	transition: opacity .5s;
+	&.open {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+body.open {
+	overflow: hidden;
+}
+
+@media only screen and (max-width: $break-large + 1) {
+
+	.site-nav {
+		color: white;
+		background: $brand-color-primary url('../images/mobile-nav-bg.svg') no-repeat right bottom;
+		text-align: left;
+		max-width: 16rem;
+		width: 80%;
+		padding: $base-line-height 0;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: -100%;
+		z-index: 4;
+		transition: left .5s;
+		&.open {
+			left: 0;
+		}
+		a {
+			padding: ($base-line-height * .5) $base-line-height;
+		}
+	}
+
+}
+
+@media only screen and (min-width: $break-large + 1) {
+
+	.nav-container {
+		width: 75%;
+	}
+	.site-nav {
+		text-align: right;
+		padding: $base-line-height;
+		> ul {
+			> li {
+				display: inline-block;
+				position: relative;
+				&.header-phone {
+					font-weight: bold;
+					margin-right: $base-line-height * .5;
+					padding-right: $base-line-height * .5;
+					border-right: solid thin white;
+					a {
+						display: inline-block;
+					}
+				}
+				&:hover ul {
+					display: block;
+				}
+			}
+			a {
+				color: white;
+				display: block;
+				padding: ($base-line-height * .5) ($base-line-height * .4);
+				transition: background-color .25s;
+				&:hover {
+					color: white;
+					background-color: rgba(white, .25);
+				}
+			}
+			ul {
+				font-size: $base-font-size * .875;
+				line-height: 1.25em;
+				color: white;
+				background-color: $brand-color-primary;
+				text-align: left;
+				min-width: 12rem;
+				position: absolute;
+				top: 100%;
+				left: 0;
+			}
+		}
+	}
+	.mobile-contact {
+		display: none;
+	}
+
+}

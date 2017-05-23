@@ -1,0 +1,98 @@
+.site-header {
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+.logo {
+	svg {
+		height: 4.5rem;
+		width: 9.5rem;
+	}
+}
+.logo-svg-container {
+	fill: none;
+}
+.logo-svg-color-1 {
+	fill: $brand-color-primary;
+}
+.logo-svg-color-2 {
+	fill: $brand-color-secondary;
+}
+
+@media only screen and (min-width: $break-large + 1) {
+
+	@keyframes sticky-fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	.site-header {
+		background-color: rgba(white, 0);
+		flex-wrap: nowrap;
+		flex-direction: row;
+		align-items: flex-start;
+		position: absolute;
+		z-index: 2;
+		&.stuck {
+			background-color: rgba(white, 1);
+			box-shadow: 0 0 .5rem 0 rgba(black, .3);
+			position: fixed;
+			top: 0;
+			left: 0;
+			animation: sticky-fade .5s;
+			.logo {
+				svg {
+					height: 4.5rem;
+					width: 9.5rem;
+					margin-top: 0;
+				}
+			}
+			.logo-svg-color-1 {
+				fill: $brand-color-primary;
+			}
+			.site-nav {
+				font-size: $base-font-size * .875;
+				padding: ($base-line-height * .5) $base-line-height;
+				a {
+					color: $brand-color-primary;
+					&:hover {
+						background-color: $brand-color-secondary-light;
+					}
+					&.on {
+						color: $brand-color-secondary;
+					}
+				}
+			}
+		}
+	}
+	.logo {
+		width: 25%;
+		svg {
+			height: 5.6875rem;
+			width: 12rem;
+			max-width: 100%;
+			margin-top: .5rem;
+		}
+	}
+	.home {
+		.logo {
+			svg {
+				height: auto;
+				width: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+	.logo-svg-color-1 {
+		fill: white;
+	}
+
+}

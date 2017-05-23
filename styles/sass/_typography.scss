@@ -1,0 +1,114 @@
+/* ==========================================================================
+    Typography defaults
+========================================================================== */
+
+$body-font: "proxima-nova", sans-serif;
+html {
+	font-family: "proxima-nova", sans-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+	color: $gray;
+	background-color: $brand-color-secondary-light;
+}
+a {
+	text-decoration: none;
+	color: $brand-color-primary;
+	&:hover {
+		color: $brand-color-secondary;
+	}
+}
+h1, h2 {
+	font-weight: 300;
+}
+hr {
+	color: $brand-color-secondary;
+	background-color: $brand-color-secondary;
+	height: 1px;
+	padding: 0;
+	border: none;
+}
+img, svg, input, select, textarea, button, .button {
+    vertical-align: middle;
+}
+svg, img, iframe {
+    max-width: 100%;
+	height: auto;
+}
+@mixin button {
+	font-family: $body-font;
+	font-size: $base-font-size * 1.25;
+	font-weight: normal;
+	display: inline-block;
+	text-align: center;
+	padding: ($base-line-height * .5) $base-line-height;
+	border: none;
+	transition: background-color .25s;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+}
+input {
+	font-family: $body-font;
+}
+input[type=text], input[type=tel] {
+	color: $gray;
+	background-color: white;
+	padding: $base-font-size * .52;
+	border: solid thin white;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+.button, input[type=button], button, input[type=reset], input[type=submit] {
+	@include button;
+	color: white;
+	background-color: $brand-color-primary;
+	-webkit-appearance: none;
+	&:hover {
+		color: white;
+		background-color: $brand-color-secondary;
+	}
+	&.button-light {
+		color: white;
+		background-color: darken($brand-color-secondary, 10%);
+		&:hover {
+			color: white;
+			background-color: $brand-color-secondary;
+		}
+	}
+	&.ghost-button {
+		color: white;
+		background-color: transparent;
+		border: solid thin white;
+		&:hover {
+			color: white;
+			background-color: rgba(white, .2);
+		}
+	}
+}
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+}
+caption, th, td {
+    font-size: 1em;
+    text-align: left;
+    vertical-align: top;
+}
+header ul, nav ul, aside ul, footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header ul li, nav ul li, aside ul li, footer ul li {
+    list-style: none;
+}
+dt {
+	font-weight: bold;
+}
