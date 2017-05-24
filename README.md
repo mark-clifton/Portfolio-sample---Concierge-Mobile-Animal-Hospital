@@ -9,4 +9,6 @@ Utilizes:
 * jQuery
 * Modernizr
 
+[Full project information](http://mark-clifton.com/portfolio/concierge-mobile-animal-hospital/)
+
 ![Concierge Mobile Animal Hospital screenshots](https://cloud.githubusercontent.com/assets/28513763/26424780/648bf398-40a0-11e7-8900-ae83a4dbe48a.jpg)
