@@ -13,8 +13,8 @@ $(document).ready(function(){
 
 	var winWidth = $(window).width();
 
-	function responsiveresize(){
-        window.location.reload();
+	function responsiveresize() {
+		window.location.reload();
 	};
 	var resizeTimer;
 	$(window).resize(function() {
@@ -47,10 +47,10 @@ $(document).ready(function(){
 		$("body").append("<div class=\"nav-overlay\"></div>");
 		// Toggle button
 		$(".nav-toggle").click(function(){
-			 toggleMenu();
+			toggleMenu();
 		});
 		$(".nav-overlay").click(function(){
-			 toggleMenu();
+			toggleMenu();
 		});
 	}
 
@@ -72,24 +72,24 @@ $(document).ready(function(){
 ==================================================================================================================== */
 
 function stickyElement(element, sticky_navigation_offset_top) {
-    // Load on larger screens only
-    if(Modernizr.mq('screen and (min-width:1004px)')) {
-        // our function that decides weather the navigation bar should have "fixed" css position or not.
-        var sticky_navigation = function(){
-            var scroll_top = $(window).scrollTop(); // our current vertical position from the top
-            // if we've scrolled more than the navigation, toggle its class
-            if (scroll_top > sticky_navigation_offset_top) {
-                $(element).addClass('stuck');
-            } else {
-                $(element).removeClass('stuck');
-            }
-        };    // run our function on load
-        sticky_navigation();
-        // and run it again every time you scroll
-        $(window).scroll(function() {
-            sticky_navigation();
-        });
-    }
+	// Load on larger screens only
+	if(Modernizr.mq('screen and (min-width:1004px)')) {
+		// our function that decides weather the navigation bar should have "fixed" css position or not.
+		var sticky_navigation = function() {
+			var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+			// if we've scrolled more than the navigation, toggle its class
+			if (scroll_top > sticky_navigation_offset_top) {
+				$(element).addClass('stuck');
+			} else {
+				$(element).removeClass('stuck');
+			}
+		}; // run our function on load
+		sticky_navigation();
+		// and run it again every time you scroll
+		$(window).scroll(function() {
+			sticky_navigation();
+		});
+	}
 }
 $(function() {
 	/* Make header sticky */
@@ -162,7 +162,7 @@ function initMap() {
 			stylers: [{color: '#00588a'}]
 		}
 	], {
-	name: 'Custom Style'
+		name: 'Custom Style'
 	});
 	var customMapTypeId = 'custom_style';
 	/* Create map */
