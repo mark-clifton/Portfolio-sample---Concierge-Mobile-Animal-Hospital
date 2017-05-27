@@ -2,12 +2,16 @@
 
 Website designed and developed for a mobile veterinary hospital in 2016 by [Mark Clifton](http://mark-clifton.com/), while employed by [Beyond Indigo](http://beyondindigo.com/).
 
-Utilizes:
+## View in browser
 
-* HTML
-* Sass
-* jQuery
-* Modernizr
+* [Home page](http://mark-clifton.com/samples/concierge/)
+* [Interior page](http://mark-clifton.com/samples/concierge/inside.html)
+
+## Tools
+
+* [Sass](http://sass-lang.com/)
+* [jQuery](https://jquery.com/)
+* [Modernizr](https://modernizr.com/)
 
 [Full project information](http://mark-clifton.com/portfolio/concierge-mobile-animal-hospital/)
 
