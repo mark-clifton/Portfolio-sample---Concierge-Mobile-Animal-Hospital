@@ -12,6 +12,12 @@ Website designed and developed for a mobile veterinary hospital in 2016 by [Mark
 * [Sass](http://sass-lang.com/)
 * [jQuery](https://jquery.com/)
 * [Modernizr](https://modernizr.com/)
+* [CodeKit](https://codekitapp.com/)
+* [Brackets](http://brackets.io/)
+* [Adobe Photoshop](http://www.adobe.com/products/photoshop.html)
+* [Adobe Illustrator](http://www.adobe.com/products/illustrator.html)
+* [Adobe Premiere](http://www.adobe.com/products/premiere.html)
+* [Miro Video Converter](http://www.mirovideoconverter.com/)
 
 [Full project information](http://mark-clifton.com/portfolio/concierge-mobile-animal-hospital/)
 
